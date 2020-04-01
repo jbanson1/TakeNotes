@@ -1,0 +1,19 @@
+<div>
+  <h2>Please type in something you are required to-do</h2>
+  <input type="text" class="task-input" placeholder="Things to do" [(ngModel)]="tasksTitle" (keyup.enter)="addTask()">
+</div>
+
+<div class="todo-item" *ngFor="let task of tasks">
+
+  <div class="todo-item-left">
+    <input type="checkbox" [(ngModel)]="task.completed" >
+
+    <div class="todo-item-label" >
+      {{ tasks.title }}
+    </div>
+
+    <div class="remove-item" (click)="deleteTask(task.id)">
+      &times;
+    </div>
+  </div>
+</div>
