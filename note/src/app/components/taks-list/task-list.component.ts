@@ -17,7 +17,7 @@ export class taskListComponent implements OnInit {
     
     this.idForTasks = 4;
     this.taskTitle = '';
-    this.tasks = [ 
+    this.tasks = [
     {
       'id' : 1,
       'title' : 'Finsh angular screenshot',
