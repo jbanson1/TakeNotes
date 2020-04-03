@@ -48,7 +48,7 @@ export class taskListComponent implements OnInit {
   }
 
   deleteTask(id:number):void{
-    this.tasks = this.tasks.filter(task => task.id); 
+    this.tasks = this.tasks.filter(task => task.id !==id); 
   }
 
   remaining(): number {
