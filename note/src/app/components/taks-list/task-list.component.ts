@@ -10,40 +10,31 @@ export class taskListComponent implements OnInit {
     tasks : Task[];
     taskTitle: string;
     idForTasks : number;
+    completed : boolean;
 
   constructor() { }
 
   ngOnInit() {
     
-    this.idForTasks = 4;
+    this.idForTasks = 2;
     this.taskTitle = '';
     this.tasks = [
     {
       'id' : 1,
       'title' : 'Finsh angular screenshot',
       'completed' : false,
-      'editing' : false,
+      'editing' : false
     },
-    {
-      'id' : 2,
-      'title' : 'Finsh angular screenshot',
-      'completed' : false,
-      'editing' : false,
-    },
-    {
-      'id' : 3,
-      'title' : 'Finsh angular screenshot',
-      'completed' : false,
-      'editing' : false,
-    },
+
   ];
-  }
+
+}
 
   addTask(): void{
     if(this.taskTitle.trim().length == 0 ){
       return;
     }
-  
+
     this.tasks.push({
       id: this.idForTasks,
       title: this.taskTitle,
@@ -57,7 +48,15 @@ export class taskListComponent implements OnInit {
   }
 
   deleteTask(id:number):void{
-    this.tasks = this.tasks.filter(task => this.tasks.id !== id); 
+    this.tasks = this.tasks.filter(task => task.id !==id); 
+  }
+
+  remaining(): number {
+    return this.tasks.filter(task => !task.completed).length;
+  }
+
+  done(): number {
+    return this.tasks.filter(task => task.completed).length;
   }
 
 }
