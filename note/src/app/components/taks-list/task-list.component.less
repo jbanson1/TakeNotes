@@ -2,17 +2,45 @@
 {
     padding-left: 150px;
 }
+.task-input{
+    width: 500px;
+    padding: 10px 18px;
+    font-size: 18px;
+    margin-bottom: 16px;
+  
+    &:focus {
+      outline: 0;  
+    }
+}
+.task-item{
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation-duration: 0.3s;
+  
+}
+.task-item-left{
+  display: flex;
+  align-items: center;
+}
+.task-item-label{
+    padding: 10px;
+    border: 1px solid white;
+    margin-left: 12px;
+    }
 
- .task-item-label{
-    margin-right : right 10px;;
-    }
     .checkbox{
-    float: left;
-    widows: 25px;;
-    overflow:hidden;
+   text-decoration: line-through;
+  color: grey;
     }
+
     .remove-item{
-    float:left;
-    widows: 25px;;
-    overflow:hidden;
+        cursor: pointer;
+        margin-left: 14px;
+        &:hover {
+          color: black;
+        }
+    
     } 
+

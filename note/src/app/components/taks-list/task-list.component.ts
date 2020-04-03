@@ -15,7 +15,7 @@ export class taskListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    9
+    
     this.idForTasks = 2;
     this.taskTitle = '';
     this.tasks = [
@@ -25,7 +25,12 @@ export class taskListComponent implements OnInit {
       'completed' : false,
       'editing' : false
     },
- 
+    {
+      'id' : 2,
+      'title' : 'Finsh angular screenshot',
+      'completed' : false,
+      'editing' : false
+    },
   ];
 
 }
@@ -50,5 +55,7 @@ export class taskListComponent implements OnInit {
   deleteTask(id:number):void{
     this.tasks = this.tasks.filter(task => task.id); 
   }
+
+
 
 }

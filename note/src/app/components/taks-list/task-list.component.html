@@ -10,15 +10,21 @@
   </div>
   
   <div class="task-item" *ngFor="let task of tasks">
-
     <div class="task-item-left">
-
-      <div class="task-item-label"> {{ task.title }} </div>
-
+     
       <input class="checkbox" type="checkbox" [(ngModel)]="task.completed">
 
-      <div class="remove-item" (click)="deleteTask(task.id)"> &times; </div>
+      <div class="task-item-label"> {{ task.title }}</div>
 
     </div>
+    <div class="remove-item" (click)="deleteTask(task.id)"> &times; </div>
   </div>
+
+  <div class="container" >
+
+  <div class="Extra-container">
+    
+  </div>
+  </div>
+
 </body>
