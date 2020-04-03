@@ -17,14 +17,16 @@
       <div class="task-item-label"> {{ task.title }}</div>
 
     </div>
-    <div class="remove-item" (click)="deleteTask(task.id)"> &times; </div>
+
+    <div class="remove-item" (click)="deleteTask(task.id)"> 
+      &times;
+    </div>
   </div>
 
-  <div class="container" >
+  <div class="Extra-container"></div>
 
-  <div class="Extra-container">
-    
-  </div>
-  </div>
+  <div>{{ remaining() }} items left</div>
+
+  <div>{{ done() }} items completed</div>  
 
 </body>

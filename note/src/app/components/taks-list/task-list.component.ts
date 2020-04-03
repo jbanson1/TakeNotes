@@ -25,12 +25,7 @@ export class taskListComponent implements OnInit {
       'completed' : false,
       'editing' : false
     },
-    {
-      'id' : 2,
-      'title' : 'Finsh angular screenshot',
-      'completed' : false,
-      'editing' : false
-    },
+
   ];
 
 }
@@ -56,6 +51,12 @@ export class taskListComponent implements OnInit {
     this.tasks = this.tasks.filter(task => task.id); 
   }
 
+  remaining(): number {
+    return this.tasks.filter(task => !task.completed).length;
+  }
 
+  done(): number {
+    return this.tasks.filter(task => task.completed).length;
+  }
 
 }
